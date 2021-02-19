@@ -23,8 +23,6 @@ export class CharacterGroup implements ISortable {
     //AsciiLeft/right stores the lowercase Ascii codepoint number of the character
     let AsciiLeft = this.data.toLowerCase().charCodeAt(leftPos);
     let AsciiRight = this.data.toLowerCase().charCodeAt(rightPos);
-    if (AsciiLeft > AsciiRight) {
-      return true;
-    }
+    return AsciiLeft > AsciiRight;
   }
 }

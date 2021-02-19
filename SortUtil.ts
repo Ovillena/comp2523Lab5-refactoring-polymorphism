@@ -16,6 +16,7 @@ export class SortUtil {
       for (let i = 0; i < lastUnsorted; i++) {
         if (this.collection.compare(i, i + 1)) {
           this.collection.swap(i, i + 1);
+          isSorted = false;
         }
       }
       lastUnsorted--;
